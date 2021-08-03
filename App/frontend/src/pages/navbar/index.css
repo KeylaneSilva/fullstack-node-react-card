@@ -1,0 +1,38 @@
+nav{
+    height: 65px;
+    /* width: 100vw; */
+    background-color: var(--SecondaryColor);
+}
+
+div.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    
+    margin: auto;
+    height: 100%;
+    max-width: 1100px;
+}
+
+div.containerLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    max-height: 40px;
+
+    color: var(--White);
+}
+
+div.containerLogo img.logo{
+    width: 40px;
+    filter: invert();
+}
+
+div.containerLogo h1{
+    font-weight: 400;
+    text-transform: uppercase;
+}

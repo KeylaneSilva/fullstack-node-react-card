@@ -1,0 +1,216 @@
+div.maxLayout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0000004d;
+    z-index: 1;
+}
+
+div.modalLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: 60vh;
+    width: 60vw;
+    max-width: 900px;
+    padding: 30px;
+    background: var(--PrimaryColor);
+    box-shadow: 0 0 45px #0000009c;
+    position: relative;
+}
+
+div.modalLayout h1 {
+    font-weight: 400;
+    color: var(--SecondaryColor)
+}
+
+div.modalLayout form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+div.rowOne {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+div.modalLayout form div.column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+div.modalLayout form input, textarea {
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid ;
+    margin-bottom: 50px;
+    padding: 4px 4px 5px 7px;
+    font-size: 16px;
+    width: 100%;
+}
+
+div.modalLayout form input:focus{
+    color: var(--FocusColor);
+}
+
+textarea{
+    margin: 0;
+    resize: none;
+    height: 100px;
+}
+
+div.modalLayout form input[type="checkbox"] {
+    margin-bottom: 0;
+    width: 10px;
+}
+
+
+div.modalLayout form input::placeholder{
+    font-size: 16px;
+}
+
+div.modalLayout form label{
+   display: block;
+   color: #808080;
+}
+
+div.modalLayout form input:focus::placeholder{
+    color: transparent;
+}
+
+
+div.toggle{
+    margin-top: 13px;
+    display: flex;
+    gap: 15px;
+}
+
+.toggle > input {
+    display: none;
+}
+
+.toggle > label#vendidoLabel {
+    position: relative;
+    display: block;
+    height: 15px;
+    width: 40px;
+    background: #898989;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle > label#vendidoLabel:after {
+    position: absolute;
+    left: -2px;
+    top: -3px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background: #fff;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 0.3s ease;
+}
+
+.toggle > label#vendidoLabel:active:after {
+    transform: scale(1.15, 0.85);
+}
+.toggle > input:checked ~ label#vendidoLabel {
+    background: var(--SecondaryColor);
+}
+.toggle > input:checked ~ label#vendidoLabel:after {
+    left: 20px;
+    background: var(--FocusColor);
+}
+.toggle > input:disabled ~ label#vendidoLabel {
+    background: #d5d5d5;
+    pointer-events: none;
+}
+.toggle > input:disabled ~ label#vendidoLabel:after {
+    background: #bcbdbc;
+}
+
+div.buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+div.buttons button , div.buttons span {
+    background: var(--SecondaryColor);
+    color: var(--White);
+    font-size: 18px;
+    font-weight: 500;
+    width: 140px;
+    padding: 15px;
+    border: none;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+div.buttons button:active, div.buttons span:active{
+    transform: translateY(2px);
+}
+
+div.container-popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+div.popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+
+    background: var(--PrimaryColor);
+    box-shadow: 0 0 20px #0000009c;
+
+    padding: 20px;
+}
+
+div.popup button{
+    background: var(--SecondaryColor);
+    color: var(--White);
+    font-weight: 500;
+    padding: 5px;
+    border: none;
+
+    cursor: pointer;
+}
+
+div.popup button:active{
+    transform: translateY(2px);
+}
+
+@media only screen and (max-width:520px){
+    div.modalLayout {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    div.rowOne{
+        flex-direction: column;
+    }
+}

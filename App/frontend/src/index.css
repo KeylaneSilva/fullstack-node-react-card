@@ -1,0 +1,44 @@
+:root{
+  --PrimaryColor: #E2E4E1;
+  --SecondaryColor: #364147;
+  --DetalhesColor: #4B9D6D;
+  --CardDetailsColor: #F1F2F0;
+  --InputColor: #2a3138;
+  --FocusColor: #487B9E;
+  --White: #fff;
+  --Gray: #969696;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--PrimaryColor);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ 
+:target {
+  scroll-margin-top: .1px;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}

@@ -1,0 +1,39 @@
+div.card{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    
+    background: var(--White);
+}
+
+div.dados{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+div.dados h3.title-card{
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+div.dados p.veiculo{
+    color: var(--DetalhesColor)
+}
+
+div.dados p.ano{
+    color: var(--Gray);
+}
+
+div.fav{
+    display: flex;
+    align-items: center;
+    width: 40px;
+}
+
+div.fav img{
+    width: 100%;
+}
